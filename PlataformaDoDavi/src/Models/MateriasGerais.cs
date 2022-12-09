@@ -14,7 +14,7 @@ namespace PlataformaDoDavi.src.Models
          public List<Aluno> Alunos { get; set; } = new List<Aluno>();
          public Professor? ProfessorResponsavel { get; set; }
         
-        public class Materia
+        public class Materia : MateriasGerais
         {
             
             private Funcionario.Professor? professorResponsavel;
@@ -51,7 +51,7 @@ namespace PlataformaDoDavi.src.Models
                 return false;
             }
         }
-        public class Extensao
+        public class Extensao : MateriasGerais
         {
             private Funcionario.Professor? professorResponsavel;
             public Extensao(string nome, Professor? professorResponsavel)
