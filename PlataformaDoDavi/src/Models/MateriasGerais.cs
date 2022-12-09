@@ -10,13 +10,14 @@ namespace PlataformaDoDavi.src.Models
 {
     public class MateriasGerais
     {
+         public string Nome { get; set; }
+         public List<Aluno> Alunos { get; set; } = new List<Aluno>();
+         public Professor? ProfessorResponsavel { get; set; }
+        
         public class Materia
         {
+            
             private Funcionario.Professor? professorResponsavel;
-
-            public string Nome { get; set; }
-            public List<Aluno> Alunos { get; set; } = new List<Aluno>();
-            public Professor? ProfessorResponsavel { get; set; }
 
             public Materia(string nome, Professor? professorResponsavel)
             {
@@ -53,11 +54,6 @@ namespace PlataformaDoDavi.src.Models
         public class Extensao
         {
             private Funcionario.Professor? professorResponsavel;
-
-            public string Nome { get; set; }
-            public List<Aluno> Alunos { get; set; } = new List<Aluno>();
-            public Professor? ProfessorResponsavel { get; set; }
-
             public Extensao(string nome, Professor? professorResponsavel)
             {
                 this.Nome = nome;
